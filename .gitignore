@@ -1,0 +1,46 @@
+# Xcode
+*.xcworkspace
+*.xcuserstate
+xcuserdata/
+
+# SwiftPM
+.build/
+Packages/
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+
+# Archives and build products
+*.xcarchive
+DerivedData/
+build/
+
+# User-specific files
+*.swp
+*.swo
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# Simulator logs
+*.log
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+.swiftpm/
+.idea/
+.DS_Store
+
+# Misc
+*.orig
