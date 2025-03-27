@@ -8,40 +8,25 @@
 import UIKit
 import SceneKit
 
-class GameViewController: UIViewController {
+// MARK: - GameViewController
 
-    var gameView: SCNView {
-        return self.view as! SCNView
-    }
+class GameViewController: UIViewController {
     
-    var gameController: GameController!
+    var sceneView: SCNView?
+    let scene = GameScene(create: true)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.gameController = GameController(sceneRenderer: gameView)
-        
-        // Allow the user to manipulate the camera
-        self.gameView.allowsCameraControl = true
-        
-        // Show statistics such as fps and timing information
-        self.gameView.showsStatistics = true
-        
-        // Configure the view
-        self.gameView.backgroundColor = UIColor.black
-        
-        // Add a tap gesture recognizer
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
-        var gestureRecognizers = gameView.gestureRecognizers ?? []
-        gestureRecognizers.insert(tapGesture, at: 0)
-        self.gameView.gestureRecognizers = gestureRecognizers
-    }
-    
-    @objc
-    func handleTap(_ gestureRecognizer: UIGestureRecognizer) {
-        // Highlight the tapped nodes
-        let p = gestureRecognizer.location(in: gameView)
-        gameController.highlightNodes(atPoint: p)
+        sceneView = self.view as? SCNView
+
+        if let sceneView {
+            sceneView.scene = scene
+            sceneView.delegate = scene
+            sceneView.isPlaying = true
+            sceneView.showsStatistics = true
+            sceneView.backgroundColor = UIColor(red: 0xc9/255, green: 0xfc/255, blue: 0xfb/255, alpha: 1)
+            sceneView.antialiasingMode = .multisampling4X
+        }
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -55,5 +40,4 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
-
 }
