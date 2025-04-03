@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		5EBE22821BE845F400A0CDE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBE22811BE845F400A0CDE8 /* Assets.xcassets */; };
 		5EBE22851BE845F400A0CDE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EBE22831BE845F400A0CDE8 /* LaunchScreen.storyboard */; };
 		5EBE228D1BE8464000A0CDE8 /* IslandScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBE228C1BE8464000A0CDE8 /* IslandScene.swift */; };
+		90C57F912D95C93100F41015 /* LighthouseSceneGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C57F902D95C93100F41015 /* LighthouseSceneGraph.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5EBE22841BE845F400A0CDE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EBE22861BE845F400A0CDE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EBE228C1BE8464000A0CDE8 /* IslandScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IslandScene.swift; sourceTree = "<group>"; };
+		90C57F902D95C93100F41015 /* LighthouseSceneGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LighthouseSceneGraph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				5EBE22831BE845F400A0CDE8 /* LaunchScreen.storyboard */,
 				5EBE22861BE845F400A0CDE8 /* Info.plist */,
 				5EBE228C1BE8464000A0CDE8 /* IslandScene.swift */,
+				90C57F902D95C93100F41015 /* LighthouseSceneGraph.swift */,
 			);
 			path = Lighthouse;
 			sourceTree = "<group>";
@@ -106,14 +109,15 @@
 				};
 			};
 			buildConfigurationList = 5EBE22701BE845F400A0CDE8 /* Build configuration list for PBXProject "Lighthouse" */;
-			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
 			mainGroup = 5EBE226C1BE845F400A0CDE8;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 5EBE22761BE845F400A0CDE8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EBE227D1BE845F400A0CDE8 /* GameViewController.swift in Sources */,
+				90C57F912D95C93100F41015 /* LighthouseSceneGraph.swift in Sources */,
 				5EBE228D1BE8464000A0CDE8 /* IslandScene.swift in Sources */,
 				5EBE22791BE845F400A0CDE8 /* AppDelegate.swift in Sources */,
 			);
@@ -206,11 +211,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -245,9 +251,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -258,8 +265,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Lighthouse/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.megaplex.Lighthouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -270,8 +280,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Lighthouse/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.megaplex.Lighthouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
